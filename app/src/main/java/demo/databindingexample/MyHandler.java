@@ -2,6 +2,7 @@ package demo.databindingexample;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by saransh on 20/02/18.
@@ -17,5 +18,8 @@ public class MyHandler {
             ((Button) view).setText("Clicked " + times + " times");
             view.setTag(times);
         }
+
     }
+    public void longClick(View view){}
+
 }

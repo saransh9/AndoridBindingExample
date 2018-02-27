@@ -10,23 +10,35 @@
         <variable
             name="clickevent"
             type="demo.databindingexample.MyHandler" />
+
         <variable
             name="gitpojoobs"
-            type="demo.databindingexample.GitPojoObs"/>
+            type="demo.databindingexample.GitPojoObs" />
+
         <variable
             name="clickevent1"
             type="demo.databindingexample.MainActivity" />
+
         <variable
             name="user"
-            type="demo.databindingexample.ObservableUser"/>
+            type="demo.databindingexample.ObservableUser" />
+
         <variable
             name="clickevent2"
             type="demo.databindingexample.MainActivity" />
+
+        <variable
+            name="presenter"
+            type="demo.databindingexample.Presenter" />
+
+        <variable
+            name="activity"
+            type="demo.databindingexample.MainActivity" />
+
     </data>
 
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,6 +62,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:onClick="@{clickevent::onClickButton}"
+            android:onLongClickListener="@{activity.buttonClickListener}"
             android:tag="1"
             android:text="bb"
             app:layout_constraintBaseline_toBaselineOf="@+id/button2"
@@ -77,6 +90,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:onClick="@{clickevent1::clickOccured}"
+            android:onLongClick="@{(theView)-> clickevent1.longClick(theView)}"
             android:text="Observalefield example"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
